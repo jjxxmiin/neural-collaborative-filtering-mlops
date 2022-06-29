@@ -1,0 +1,27 @@
+model: 
+  name: mlp
+  layers: [16, 64, 32, 16, 8]
+
+dataset:
+  root: data
+  ratings: data/ratings.dat
+  users: data/users.dat
+  movies: data/movies.dat
+  num_users: 6040
+  num_items: 3706
+  num_negative: 4
+  latent_dim: 8
+
+train:
+  epoch: 200
+  batch_size: 256
+  num_workers: 8
+  learning_rate: 0.0001
+  l2_regularization: 0.0000001
+  device: cuda
+  gmf_checkpoint: checkpoints/best_gmf.pth
+  best_checkpoint: checkpoints/best_mlp.pth
+  latest_checkpoint: checkpoints/latest_mlp.pth
+
+mlflow:
+  runname: mlp

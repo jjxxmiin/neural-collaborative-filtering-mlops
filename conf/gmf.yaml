@@ -1,0 +1,24 @@
+model: 
+  name: gmf
+
+dataset:
+  root: data
+  ratings: data/ratings.dat
+  users: data/users.dat
+  movies: data/movies.dat
+  num_users: 6040
+  num_items: 3706
+  num_negative: 4
+  latent_dim: 8
+
+train:
+  epoch: 200
+  batch_size: 1024
+  num_workers: 8
+  learning_rate: 0.0001
+  device: cuda
+  best_checkpoint: checkpoints/best_gmf.pth
+  latest_checkpoint: checkpoints/latest_gmf.pth
+
+mlflow:
+  runname: gmf

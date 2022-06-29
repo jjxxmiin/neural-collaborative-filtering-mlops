@@ -1,0 +1,4 @@
+[core]
+    remote = checkpoints
+['remote "checkpoints"']
+    url = X:\models
