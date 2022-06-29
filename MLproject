@@ -1,0 +1,11 @@
+name: neural_cf
+
+conda_env: conda.yaml
+
+entry_points:
+  gmf:
+    command: "python train_gmf.py"
+  mlp:
+    command: "python train_mlp.py"
+  neumf:
+    command: "python train_neumf.py"

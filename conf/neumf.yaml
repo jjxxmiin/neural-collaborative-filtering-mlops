@@ -1,6 +1,7 @@
 model: 
   name: neumf
-  layers: [16, 32, 16, 8]
+  mlp_layers: [16, 64, 32, 16, 8]
+  neumf_layers: [16, 32, 16, 8]
 
 dataset:
   root: data
